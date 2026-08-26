@@ -1,0 +1,290 @@
+{
+  "cpus": [
+    {
+      "name": "Ryzen 7 9700X",
+      "aliases": ["9700X", "锐龙9700X"],
+      "socket": "AM5",
+      "tdp_w": 65,
+      "recommended_chipsets": ["B850", "X870", "B650"]
+    },
+    {
+      "name": "Ryzen 5 9600X",
+      "aliases": ["9600X", "锐龙9600X"],
+      "socket": "AM5",
+      "tdp_w": 65,
+      "recommended_chipsets": ["B850", "X870", "B650"]
+    },
+    {
+      "name": "Ryzen 7 7800X3D",
+      "aliases": ["7800X3D"],
+      "socket": "AM5",
+      "tdp_w": 120,
+      "recommended_chipsets": ["B850", "X870", "B650", "X670"]
+    },
+    {
+      "name": "Intel Core i7-13700K",
+      "aliases": ["i7-13700K", "13700K"],
+      "socket": "LGA1700",
+      "tdp_w": 125,
+      "recommended_chipsets": ["Z790", "B760"]
+    }
+  ],
+  "motherboards": [
+    {
+      "name": "B850",
+      "aliases": ["B850主板", "B850 ATX主板"],
+      "socket": "AM5",
+      "chipset": "B850",
+      "form_factor": "ATX",
+      "memory_type": "DDR5",
+      "m2_slots": 3,
+      "pcie_x16_slots": 2
+    },
+    {
+      "name": "B850M",
+      "aliases": ["B850M主板", "M-ATX主板", "MATX主板", "小板"],
+      "socket": "AM5",
+      "chipset": "B850",
+      "form_factor": "M-ATX",
+      "memory_type": "DDR5",
+      "m2_slots": 2,
+      "pcie_x16_slots": 1
+    },
+    {
+      "name": "Z790",
+      "aliases": ["Z790主板"],
+      "socket": "LGA1700",
+      "chipset": "Z790",
+      "form_factor": "ATX",
+      "memory_type": "DDR5",
+      "m2_slots": 4,
+      "pcie_x16_slots": 2
+    },
+    {
+      "name": "H610M DDR4",
+      "aliases": ["H610M", "H610M主板"],
+      "socket": "LGA1700",
+      "chipset": "H610",
+      "form_factor": "M-ATX",
+      "memory_type": "DDR4",
+      "m2_slots": 1,
+      "pcie_x16_slots": 1
+    }
+  ],
+  "cases": [
+    {
+      "name": "ATX标准机箱",
+      "aliases": ["ATX机箱", "大机箱", "支持底部风扇的ATX机箱", "底部风扇"],
+      "size_class": "ATX",
+      "supported_motherboard": ["ATX", "M-ATX", "Mini-ITX"],
+      "max_gpu_length_mm": 330,
+      "max_gpu_length_with_front_radiator_mm": null,
+      "max_cpu_cooler_height_mm": 165,
+      "bottom_fan_support": true,
+      "front_radiator_support_mm": [240, 280, 360],
+      "top_radiator_support_mm": [240, 280],
+      "front_radiator_support": [240, 280, 360],
+      "top_radiator_support": [240, 280],
+      "radiator_thickness_clearance_mm": null,
+      "psu_max_length_mm": 200
+    },
+    {
+      "name": "M-ATX紧凑机箱",
+      "aliases": ["M-ATX机箱", "MATX机箱", "小机箱"],
+      "size_class": "M-ATX",
+      "supported_motherboard": ["M-ATX", "Mini-ITX"],
+      "max_gpu_length_mm": 320,
+      "max_gpu_length_with_front_radiator_mm": null,
+      "max_cpu_cooler_height_mm": 155,
+      "bottom_fan_support": false,
+      "front_radiator_support_mm": [240],
+      "top_radiator_support_mm": [240],
+      "front_radiator_support": [240],
+      "top_radiator_support": [240],
+      "radiator_thickness_clearance_mm": null,
+      "psu_max_length_mm": 160
+    },
+    {
+      "name": "长显卡展示机箱",
+      "aliases": ["400mm显卡机箱", "全塔机箱"],
+      "size_class": "ATX",
+      "supported_motherboard": ["E-ATX", "ATX", "M-ATX", "Mini-ITX"],
+      "max_gpu_length_mm": 400,
+      "max_gpu_length_with_front_radiator_mm": null,
+      "max_cpu_cooler_height_mm": 185,
+      "bottom_fan_support": true,
+      "front_radiator_support_mm": [240, 280, 360, 420],
+      "top_radiator_support_mm": [240, 280, 360],
+      "front_radiator_support": [240, 280, 360, 420],
+      "top_radiator_support": [240, 280, 360],
+      "radiator_thickness_clearance_mm": null,
+      "psu_max_length_mm": 220
+    },
+    {
+      "name": "最大支持330mm显卡的机箱",
+      "aliases": ["最大支持330mm", "330mm显卡机箱"],
+      "size_class": "ATX",
+      "supported_motherboard": ["ATX", "M-ATX", "Mini-ITX"],
+      "max_gpu_length_mm": 330,
+      "max_gpu_length_with_front_radiator_mm": null,
+      "max_cpu_cooler_height_mm": 160,
+      "bottom_fan_support": false,
+      "front_radiator_support_mm": [240, 280, 360],
+      "top_radiator_support_mm": [240],
+      "front_radiator_support": [240, 280, 360],
+      "top_radiator_support": [240],
+      "radiator_thickness_clearance_mm": null,
+      "psu_max_length_mm": 180
+    }
+  ],
+  "gpus": [
+    {
+      "name": "RTX 4070 SUPER",
+      "aliases": ["4070 SUPER", "RTX4070S"],
+      "length_mm": 267,
+      "slot_width": 2.5,
+      "recommended_psu_w": 650,
+      "power_connector": "16-pin"
+    },
+    {
+      "name": "RTX 4090",
+      "aliases": ["4090显卡"],
+      "length_mm": 304,
+      "slot_width": 3,
+      "recommended_psu_w": 850,
+      "power_connector": "16-pin"
+    },
+    {
+      "name": "340mm显卡",
+      "aliases": ["340mm GPU", "340毫米显卡"],
+      "length_mm": 340,
+      "slot_width": 3.5,
+      "recommended_psu_w": 850,
+      "power_connector": "3x 8-pin"
+    },
+    {
+      "name": "3.5槽显卡",
+      "aliases": ["3.5 slot显卡", "三点五槽显卡"],
+      "length_mm": 320,
+      "slot_width": 3.5,
+      "recommended_psu_w": 750,
+      "power_connector": "2x 8-pin"
+    }
+  ],
+  "cpu_coolers": [
+    {
+      "name": "155mm塔式风冷",
+      "aliases": ["155mm风冷"],
+      "height_mm": 155,
+      "ram_clearance_mm": 45,
+      "fan_size_mm": null,
+      "radiator_size_mm": 0,
+      "type": "air"
+    },
+    {
+      "name": "双塔风冷",
+      "aliases": ["双塔散热器", "双塔风冷散热器"],
+      "height_mm": 162,
+      "ram_clearance_mm": 42,
+      "fan_size_mm": null,
+      "radiator_size_mm": 0,
+      "type": "air"
+    },
+    {
+      "name": "240mm一体水冷",
+      "aliases": ["240水冷", "240mm水冷"],
+      "height_mm": 0,
+      "ram_clearance_mm": 100,
+      "radiator_size_mm": 240,
+      "type": "liquid"
+    },
+    {
+      "name": "360mm一体水冷",
+      "aliases": ["360水冷", "360mm水冷"],
+      "height_mm": 0,
+      "ram_clearance_mm": 100,
+      "radiator_size_mm": 360,
+      "type": "liquid"
+    }
+  ],
+  "aio_coolers": [
+    {
+      "name": "240mm一体水冷",
+      "aliases": ["240水冷", "240mm水冷"],
+      "radiator_size_mm": 240,
+      "radiator_thickness_mm": null,
+      "fan_thickness_mm": null,
+      "tube_length_mm": null,
+      "type": "liquid"
+    },
+    {
+      "name": "360mm一体水冷",
+      "aliases": ["360水冷", "360mm水冷"],
+      "radiator_size_mm": 360,
+      "radiator_thickness_mm": null,
+      "fan_thickness_mm": null,
+      "tube_length_mm": null,
+      "type": "liquid"
+    }
+  ],
+  "memory": [
+    {
+      "name": "DDR5标准内存",
+      "aliases": ["普通DDR5内存", "矮马甲内存"],
+      "memory_type": "DDR5",
+      "height_mm": 34,
+      "capacity": "32GB (16GBx2)"
+    },
+    {
+      "name": "DDR5高马甲内存",
+      "aliases": ["高马甲内存", "高马甲DDR5"],
+      "memory_type": "DDR5",
+      "height_mm": 55,
+      "capacity": "32GB (16GBx2)"
+    },
+    {
+      "name": "DDR4标准内存",
+      "aliases": ["DDR4内存"],
+      "memory_type": "DDR4",
+      "height_mm": 32,
+      "capacity": "16GB (8GBx2)"
+    }
+  ],
+  "psus": [
+    {
+      "name": "550W ATX电源",
+      "aliases": ["550W电源"],
+      "wattage": 550,
+      "length_mm": 140,
+      "form_factor": "ATX"
+    },
+    {
+      "name": "600W ATX电源",
+      "aliases": ["600W电源"],
+      "wattage": 600,
+      "length_mm": 145,
+      "form_factor": "ATX"
+    },
+    {
+      "name": "650W ATX电源",
+      "aliases": ["650W电源"],
+      "wattage": 650,
+      "length_mm": 150,
+      "form_factor": "ATX"
+    },
+    {
+      "name": "850W ATX电源",
+      "aliases": ["850W电源"],
+      "wattage": 850,
+      "length_mm": 160,
+      "form_factor": "ATX"
+    },
+    {
+      "name": "1000W ATX电源",
+      "aliases": ["1000W电源"],
+      "wattage": 1000,
+      "length_mm": 180,
+      "form_factor": "ATX"
+    }
+  ]
+}

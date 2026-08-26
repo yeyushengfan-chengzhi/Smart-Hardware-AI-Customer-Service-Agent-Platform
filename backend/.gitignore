@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+vector_store/chroma/*
+!vector_store/chroma/.gitkeep

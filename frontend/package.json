@@ -1,0 +1,19 @@
+{
+  "name": "smart-hardware-ai-customer-service-agent-platform-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --configLoader runner",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "element-plus": "^2.8.8",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.5"
+  }
+}

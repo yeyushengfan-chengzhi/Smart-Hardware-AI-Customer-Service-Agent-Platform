@@ -1,0 +1,21 @@
+{
+  "B850": {
+    "product": "B850",
+    "socket": "AM5",
+    "cpu_support_series": [
+      "Ryzen 9000",
+      "Ryzen 8000",
+      "Ryzen 7000"
+    ],
+    "cpu_support_examples": [
+      "9700X",
+      "9600X",
+      "9900X"
+    ],
+    "memory_type": "DDR5",
+    "memory_slots": "DIMM",
+    "source_file": "B850MGAMINGPLUSWIFI6E_SChinese.pdf",
+    "source_page": 17,
+    "source_section": "规格 / CPU"
+  }
+}
