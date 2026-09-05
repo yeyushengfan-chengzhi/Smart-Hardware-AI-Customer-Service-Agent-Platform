@@ -16,9 +16,16 @@ from app.schemas import (
     EvaluationRunResponse,
 )
 from app.security import require_admin
+from app.services.benchmark_service import evaluate_benchmark
 from app.services.evaluation_service import execute_evaluation
 
 router = APIRouter(prefix="/evaluation", tags=["evaluation"], dependencies=[Depends(require_admin)])
+
+
+@router.get("/benchmark")
+def get_benchmark_report() -> dict:
+    """Run the small offline benchmark without calling an LLM or database."""
+    return evaluate_benchmark()
 
 
 @router.post("/cases", response_model=EvaluationCaseResponse, status_code=status.HTTP_201_CREATED)
