@@ -7,6 +7,7 @@ import KnowledgeCenter from './components/KnowledgeCenter.vue'
 import AgentManagementCenter from './components/AgentManagementCenter.vue'
 import TicketCenter from './components/TicketCenter.vue'
 import AuthGate from './components/AuthGate.vue'
+import DiagnosticWorkbench from './components/DiagnosticWorkbench.vue'
 import { AgentRequestError, executeAgent } from './services/agentApi'
 import { ApiError, getAccessToken } from './services/apiClient'
 import { createTicket, getTicket } from './services/ticketApi'
@@ -583,12 +584,7 @@ function openAdminModule(title) {
           </aside>
           <div class="session-content">
             <div v-if="!chatMessages.length && !result && !loading" class="chat-empty-home">
-              <div class="service-hero">
-                <div class="product-orb">PW</div>
-                <h2>PCWise Agent</h2>
-                <p>AI Customer Service Agent for DIY PC Hardware</p>
-                <strong class="hero-greeting">面向 DIY 电脑硬件售前售后的 AI 客服 Agent</strong>
-              </div>
+              <DiagnosticWorkbench @ask="fillExample" />
               <div class="chat-composer home-composer">
                 <div class="query-box customer-query">
                   <textarea v-model="query" rows="1" :disabled="loading || authInitializing" placeholder="询问主板说明书、装机兼容性或硬件故障..." aria-label="输入硬件问题" @input="resizeComposer" @keydown="handleComposerKeydown"></textarea>
