@@ -558,7 +558,13 @@ function openAdminModule(title) {
         </div>
       </header>
 
-      <AuthGate v-if="activeNav === 'chat' && !isAuthenticated" />
+      <section v-if="activeNav === 'chat' && !isAuthenticated" class="public-product-showcase">
+        <DiagnosticWorkbench @ask="fillExample" />
+        <div class="showcase-login">
+          <span>想保存诊断路径、查看依据并生成工单？</span>
+          <AuthGate />
+        </div>
+      </section>
 
       <section v-else-if="agentChatRestricted" class="access-denied-page agent-workspace-entry">
         <div class="access-denied-card">
