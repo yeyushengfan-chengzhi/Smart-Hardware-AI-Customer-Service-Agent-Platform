@@ -185,3 +185,4 @@ pytest 的 1 条 warning 来自 FastAPI TestClient 依赖的弃用提示，不�
 - 返回原因排名、置信度、检查风险等级与选择依据，便于前端解释和 Trace 审计。
 - 对冒烟、烧焦、火花、漏液和触电等风险信号立即停止普通流程并建议转人工。
 - 设计、调用示例和面试讲解见 [`docs/ADAPTIVE_DIAGNOSIS.md`](docs/ADAPTIVE_DIAGNOSIS.md)。
+- 新增 `HW-Support-Bench v1.0.0`：20 条带来源与局限声明的离线案例，分别评估路由、安全中止和诊断原因 Top-1；报告只展示实际运行结果，不作为生产业务指标。
