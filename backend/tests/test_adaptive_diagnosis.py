@@ -5,7 +5,7 @@ def test_first_check_is_selected_by_information_gain():
     result = AdaptiveDiagnosisService().next_check("主机开机黑屏", "no_display", [])
 
     assert result["status"] == "in_progress"
-    assert result["next_check"]["check_id"] == "debug_led"
+    assert result["next_check"]["check_id"] == "display_path"
     assert result["next_check"]["information_gain"] > 0
     assert abs(sum(item["probability"] for item in result["hypotheses"]) - 1) < .001
 
