@@ -25,6 +25,7 @@
 - SupervisorAgent：识别产品知识、故障诊断、硬件兼容性与通用问题
 - KnowledgeAgent / RAG：从官方说明书检索依据并生成带来源回答
 - DiagnosisAgent：生成结构化硬件故障排查步骤
+- Adaptive Diagnosis：根据每轮检查结果更新故障概率，以信息增益选择下一项检查，并在电气风险场景中强制转人工
 - ToolAgent：调用本地硬件兼容性工具
 - Knowledge Center：查看说明书、Chunk、Embedding 状态与检索结果
 - Ticket：AI 建议或用户主动触发人工工单，客服可回复和更新状态
@@ -175,3 +176,14 @@ pytest 的 1 条 warning 来自 FastAPI TestClient 依赖的弃用提示，不�
 - 硬件兼容性工具只覆盖当前本地结构化数据中的规则和型号。
 - AI 回答为非流式响应，请求超时阈值默认为 65 秒。
 - 当前是本地演示原型，未实现生产级密钥托管、限流、审计和高可用部署。
+
+
+## Phase 8：可解释的自适应故障诊断
+
+- 新增 `POST /api/agent/diagnosis/next-check`，支持携带历史检查结果进行多轮排障。
+- 使用贝叶斯更新维护候选故障概率，并通过期望信息增益选择下一项检查。
+- 返回原因排名、置信度、检查风险等级与选择依据，便于前端解释和 Trace 审计。
+- 对冒烟、烧焦、火花、漏液和触电等风险信号立即停止普通流程并建议转人工。
+- 设计、调用示例和面试讲解见 [`docs/ADAPTIVE_DIAGNOSIS.md`](docs/ADAPTIVE_DIAGNOSIS.md)。
+- 新增 `HW-Support-Bench v1.0.0`：20 条带来源与局限声明的离线案例，分别评估路由、安全中止和诊断原因 Top-1；报告只展示实际运行结果，不作为生产业务指标。
+- 项目从通用 RAG 到领域诊断的设计过程、20 个高频追问和演示顺序见 [`docs/INTERVIEW_AND_PROJECT_THINKING.md`](docs/INTERVIEW_AND_PROJECT_THINKING.md)。

@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { getEvaluationResults, getEvaluationRuns } from '../services/evaluationApi'
+import BenchmarkReport from './BenchmarkReport.vue'
 
 const emit = defineEmits(['open-trace'])
 const results = ref([])
@@ -58,6 +59,7 @@ function changeFilter() { page.value = 1 }
   <section class="evaluation-page">
     <div class="evaluation-head"><div><span class="section-kicker">QUALITY / REGRESSION EVALUATION</span><h2>Evaluation Harness</h2><p>查看 Agent 回归测试、失败案例和质量分布。</p></div><el-button type="primary" :loading="loading" @click="loadData">刷新数据</el-button></div>
     <el-alert v-if="error" type="error" :closable="false" show-icon :title="error"/>
+    <BenchmarkReport />
     <template v-else>
       <div class="evaluation-stats"><article><span>Total Cases</span><strong>{{ stats.total }}</strong></article><article><span>Passed</span><strong class="success-text">{{ stats.passed }}</strong></article><article><span>Failed</span><strong class="failed-text">{{ stats.failed }}</strong></article><article><span>Pass Rate</span><strong>{{ percent(stats.rate) }}</strong></article><article><span>Average Score</span><strong>{{ stats.average.toFixed(1) }}</strong></article></div>
       <div class="evaluation-scroll" v-loading="loading">

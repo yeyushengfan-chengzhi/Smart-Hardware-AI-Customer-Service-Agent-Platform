@@ -395,3 +395,83 @@ body { min-width: 320px; }
   .handoff-suggestion { grid-template-columns: 25px 1fr; }
   .handoff-suggestion button { grid-column: 2; justify-self: start; }
 }
+
+
+/* Phase 8 product hero: the diagnosis capability is visible before the first chat. */
+.chat-empty-home {
+  justify-content: flex-start;
+  overflow-y: auto;
+  padding: 18px 24px 44px;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(31, 190, 181, .13), transparent 29%),
+    radial-gradient(circle at 91% 18%, rgba(35, 111, 177, .16), transparent 26%),
+    #07131c;
+}
+.chat-empty-home .home-composer {
+  width: min(1144px, 100%);
+  margin-top: 12px;
+}
+.chat-empty-home .customer-query {
+  border-color: #294252;
+  background: rgba(13, 29, 40, .9);
+  box-shadow: 0 16px 36px rgba(0, 5, 10, .3);
+}
+.chat-empty-home .customer-query textarea {
+  color: #e5f6ff;
+}
+.chat-empty-home .customer-query textarea::placeholder {
+  color: #5d7587;
+}
+.chat-empty-home .send-button.icon-send {
+  background: linear-gradient(135deg, #12b998, #1a8daf);
+  color: #efffff;
+}
+.chat-empty-home .prompt-suggestions button {
+  border-color: #263e4e;
+  background: #0d1c27;
+  color: #7890a1;
+}
+.chat-empty-home .prompt-suggestions button:hover {
+  border-color: #1bb697;
+  color: #bdfcee;
+}
+.chat-empty-home .composer-status {
+  color: #7690a2;
+}
+@media (max-width: 700px) {
+  .chat-empty-home {
+    padding: 12px 14px 32px;
+  }
+}
+
+
+.public-product-showcase {
+  min-height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 30px 70px;
+  background:
+    radial-gradient(circle at 14% 7%, rgba(31, 190, 181, .13), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(35, 111, 177, .16), transparent 27%),
+    #07131c;
+}
+.showcase-login {
+  width: min(1144px, 100%);
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid #203746;
+}
+.showcase-login > span {
+  display: block;
+  margin-bottom: 16px;
+  color: #7891a3;
+  font-size: 12px;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .public-product-showcase {
+    padding: 12px 14px 46px;
+  }
+}

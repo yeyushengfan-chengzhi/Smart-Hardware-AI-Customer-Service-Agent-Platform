@@ -6,6 +6,7 @@ from fastapi import FastAPI
 
 from app.database import init_database
 from app.routers.agent import router as agent_router
+from app.routers.adaptive_diagnosis import router as adaptive_diagnosis_router
 from app.routers.agents import router as agents_router
 from app.routers.auth import router as auth_router
 from app.routers.chat import router as chat_router
@@ -36,6 +37,7 @@ app.include_router(dev_router, prefix="/api")
 app.include_router(knowledge_router, prefix="/api")
 app.include_router(rag_router, prefix="/api")
 app.include_router(agent_router, prefix="/api")
+app.include_router(adaptive_diagnosis_router, prefix="/api")
 app.include_router(agents_router, prefix="/api")
 app.include_router(trace_router, prefix="/api")
 app.include_router(evaluation_router, prefix="/api")

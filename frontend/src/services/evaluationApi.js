@@ -49,3 +49,8 @@ export async function getEvaluationRuns() {
     pass_rate: run.total_cases ? run.passed_cases / run.total_cases : 0,
   })).sort((a, b) => Number(b.run_id) - Number(a.run_id))
 }
+
+
+export async function getBenchmarkReport() {
+  return get('/evaluation/benchmark')
+}
